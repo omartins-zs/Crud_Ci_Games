@@ -8,6 +8,47 @@
 		</div>
 	</div>
 
+	<div class="row">
+		<div class="col mb-4">
+			<div class="card" style="width: 40rem;">
+				<div class="card-header bg-dark text-white">Jogos Por Categoria</div>
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<div>
+						<canvas id="myBarChart"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="col mb-4">
+			<div class="card">
+				<div class="card-header bg-info">Jogos Por Categoria</div>
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-4">
+			<div class="card">
+				<div class="card-header">Jogos Por Categoria</div>
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-4">
+			<div class="card">
+				<div class="card-header">Jogos Por Categoria</div>
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 		<h2 class="h2">Last 5 Games</h2>
 	</div>
