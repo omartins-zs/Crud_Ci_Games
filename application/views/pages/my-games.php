@@ -7,7 +7,7 @@
 	</div>
 
 	<div class="table-responsive">
-		<table class="table table-bordered table-hover">
+		<table class="table table-bordered table-hover tabela">
 			<thead>
 				<tr>
 					<th>#</th>
@@ -15,11 +15,11 @@
 					<th>Price</th>
 					<th>Category</th>
 					<th>Developer</th>
-					<th>Actions</th>
+					<th class="col-1">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($games as $game) : ?>
+				<?php foreach ($games as $game) : ?>
 					<tr>
 						<td><?= $game["id"] ?></td>
 						<td><?= $game["name"] ?></td>
@@ -36,12 +36,12 @@
 		</table>
 	</div>
 </main>
-  
+
 <script>
 	function goDelete(id) {
-		
-		if(confirm("Deseja apagar este registro?")) {
-			window.location.href = 'destroy/'+id;
+
+		if (confirm("Deseja apagar este registro?")) {
+			window.location.href = 'destroy/' + id;
 		} else {
 			alert("Registro não alterado");
 			return false;

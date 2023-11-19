@@ -13,7 +13,7 @@
 	</div>
 
 	<div class="table-responsive">
-		<table class="table table-bordered table-hover">
+		<table class="table table-bordered table-hover tabela">
 			<thead>
 				<tr>
 					<th>#</th>
@@ -21,11 +21,11 @@
 					<th>Price</th>
 					<th>Category</th>
 					<th>Developer</th>
-					<th>Actions</th>
+					<th class="col-1">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($games as $game) : ?>
+				<?php foreach ($games as $game) : ?>
 					<tr>
 						<td><?= $game["id"] ?></td>
 						<td><?= $game["name"] ?></td>
@@ -33,13 +33,13 @@
 						<td><?= $game["category"] ?></td>
 						<td><?= $game["developer"] ?></td>
 						<td>
-							<?php if($_SESSION["logged_user"]["id"] === $game["user_id"]) : ?>
+							<?php if ($_SESSION["logged_user"]["id"] === $game["user_id"]) : ?>
 								<a href="<?= base_url() ?>games/edit/<?= $game["id"] ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
 								<a href="javascript:goDelete(<?= $game['id'] ?>)" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
 							<?php else : ?>
-								<button disabled type="button" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
-								<button disabled type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
-							<?php endif; ?>
+								<button disabled type="button" class="btn btn-warning btn-sm mr-1"><i class="fas fa-pencil-alt"></i></a>
+									<button disabled type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+									<?php endif; ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -52,7 +52,7 @@
 	</div>
 
 	<div class="table-responsive">
-		<table class="table table-bordered table-hover">
+		<table class="table table-dark table-bordered table-hover tabela">
 			<thead>
 				<tr>
 					<th>#</th>
@@ -62,7 +62,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($users as $user) : ?>
+				<?php foreach ($users as $user) : ?>
 					<tr>
 						<td><?= $user["id"] ?></td>
 						<td><?= $user["name"] ?></td>
@@ -74,12 +74,12 @@
 		</table>
 	</div>
 </main>
-  
+
 <script>
 	function goDelete(id) {
-		var myUrl = 'games/edit/'+id;
-		if(confirm("Deseja apagar este registro?")) {
-			window.location.href = 'games/destroy/'+id;
+		var myUrl = 'games/edit/' + id;
+		if (confirm("Deseja apagar este registro?")) {
+			window.location.href = 'games/destroy/' + id;
 		} else {
 			alert("Registro não alterado");
 			return false;
