@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller
 {
@@ -25,6 +25,13 @@ class Dashboard extends CI_Controller
 		$this->load->view('templates/js', $dados);
 	}
 
+	public function gamesPerCategory()
+	{
+		$data = $this->games_model->gamesPerCategory();
+		
+		echo json_encode($data);
+	}
+
 	public function pesquisar()
 	{
 		$this->load->model("busca_model");
@@ -37,5 +44,4 @@ class Dashboard extends CI_Controller
 		$this->load->view('templates/footer', $dados);
 		$this->load->view('templates/js', $dados);
 	}
-	
 }
