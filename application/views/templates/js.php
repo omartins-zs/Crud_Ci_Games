@@ -88,7 +88,7 @@
 				data: {
 					labels: labels,
 					datasets: [{
-						label: ' Quantidade de Jogos por Categoria',
+						label: 'Quantidade de Jogos por Categoria',
 						data: counts,
 						backgroundColor: randomColors,
 						borderColor: randomColors.map(color => color.replace('0.2', '1')), // Define a borda mais escura para cada cor de fundo
@@ -98,14 +98,15 @@
 				options: {
 					scales: {
 						y: {
-							beginAtZero: true
+							beginAtZero: true,
+
 						},
 						x: {
 							title: {
 								display: true,
 								text: 'Categorias'
 							}
-						}
+						},
 					}
 				}
 			});
