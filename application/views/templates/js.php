@@ -98,11 +98,7 @@
 				options: {
 					scales: {
 						y: {
-							beginAtZero: true,
-							title: {
-								display: true,
-								text: 'Quantidade de Jogos'
-							}
+							beginAtZero: true
 						},
 						x: {
 							title: {
