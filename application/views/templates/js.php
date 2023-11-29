@@ -8,6 +8,8 @@
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<script src="<?= base_url() ?>assets/js/sb-admin-2.min.js"></script>
+
 <script>
 	$('.tabela').DataTable({
 		"ordering": true,
