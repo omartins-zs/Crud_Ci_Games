@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19/11/2023 às 22:51
+-- Tempo de geração: 29/11/2023 às 03:45
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -51,7 +51,8 @@ INSERT INTO `tb_games` (`id`, `name`, `category`, `description`, `price`, `devel
 (7, 'Grand Theft Auto 2', 'Open World', 'Grand Theft Auto 2 is a 1999 action-adventure game developed by DMA Design and published by Rockstar Games. It is the sequel to 1997\'s Grand Theft Auto as well as the second installment of the Grand Theft Auto series. The open world design lets players freely roam Anywhere City, the setting of the game. It was released in October 1999 for Microsoft Windows and the PlayStation, followed by Dreamcast and Game Boy Color releases in 2000.', 5.00, 'DMA Design Limited', '1999-10-22', 3),
 (8, 'Grand Theft Auto', 'Open World', 'Grand Theft Auto is a 1997 action-adventure game developed by DMA Design and published by BMG Interactive. It is the first instalment of the Grand Theft Auto series, and has led to five main entries and several spinoff games over 16 years, selling more than 150 million units as of September 2013. The story follows a group of criminals in three fictionalised versions of US cities as they perform bank robberies, assassinations, and other illegal activities for their respective crime syndicates. It was first released in Europe in October 1997 for MS-DOS and Microsoft Windows. It was later re-released in December 1997 in Europe and June 1998 in North America for the PlayStation.', 2.50, 'DMA Design Limited', '1997-10-21', 3),
 (12, 'The Sims 3', 'Simulation', 'The Sims é uma série de jogos eletrônicos de simulação de vida real criado pelo designer de jogos Will Wright e produzida pela Maxis. O primeiro jogo da série, The Sims, foi lançado em 4 de fevereiro de 2000. Os jogos da série The Sims são, em grande parte, jogos sandbox, pois não possuem objetivos definidos', 40.00, ' Electronic Arts', '2008-12-03', 2),
-(13, 'Forza Horizon 5', 'Racing', 'Explore um mundo aberto vibrante nas terras mexicanas com corridas divertidas e sem limites enquanto pilota os melhores carros do mundo. Acelere para o Parque Hot Wheels e corra nas pistas mais radicais já criadas. Requer Forza Horizon 5, expansão vendida separadamente. ', 98.99, 'Playground Games	', '2008-12-03', 2);
+(13, 'Forza Horizon 5', 'Racing', 'Explore um mundo aberto vibrante nas terras mexicanas com corridas divertidas e sem limites enquanto pilota os melhores carros do mundo. Acelere para o Parque Hot Wheels e corra nas pistas mais radicais já criadas. Requer Forza Horizon 5, expansão vendida separadamente. ', 98.99, 'Playground Games	', '2008-12-03', 2),
+(14, 'God of War', 'Adventure', 'Com a vingança contra os deuses do Olimpo em um passado distante, Kratos agora vive como um mortal no reino dos deuses e monstros nórdicos. É nesse mundo duro e implacável que ele deve lutar para sobreviver... e ensinar seu filho a fazer o mesmo.', 199.90, 'Santa Monica Studio	', '1111-11-11', 2);
 
 -- --------------------------------------------------------
 
@@ -100,7 +101,7 @@ ALTER TABLE `tb_users`
 -- AUTO_INCREMENT de tabela `tb_games`
 --
 ALTER TABLE `tb_games`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `tb_users`
