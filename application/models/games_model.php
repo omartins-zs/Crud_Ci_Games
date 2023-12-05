@@ -52,4 +52,10 @@ class Games_model extends CI_model
 		$this->db->group_by('category');
 		return $this->db->get('tb_games')->result_array();
 	}
+
+	public function inserirCategoria($categoryName)
+	{
+		$this->db->set('category', $categoryName);
+        $this->db->insert('tb_category_games');
+	}
 }

@@ -5,6 +5,10 @@
 			<div class="btn-group mr-2">
 				<a href="<?= base_url() ?>games/new" class="btn btn-sm btn-outline-secondary"><i class="fas fa-plus-square"></i> Game</a>
 			</div>
+			<!-- Botão para abrir o modal de cadastro de categoria -->
+			<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addCategoryModal">
+				<i class="fas fa-plus-square"></i> Categoria
+			</button>
 		</div>
 	</div>
 
@@ -20,33 +24,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="col mb-4">
-			<div class="card">
-				<div class="card-header bg-info">Jogos Por Categoria</div>
-				<div class="card-body">
-					<h5 class="card-title"></h5>
-					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col mb-4">
-			<div class="card">
-				<div class="card-header">Jogos Por Categoria</div>
-				<div class="card-body">
-					<h5 class="card-title"></h5>
-					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col mb-4">
-			<div class="card">
-				<div class="card-header">Jogos Por Categoria</div>
-				<div class="card-body">
-					<h5 class="card-title"></h5>
-					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				</div>
-			</div>
-		</div> -->
 	</div>
 
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -115,6 +92,29 @@
 		</table>
 	</div>
 </main>
+<!-- Modal para cadastro de categoria -->
+<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="addCategoryModalLabel">Adicionar Categoria</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<!-- Formulário para cadastro de categoria -->
+				<form action="<?= base_url() ?>games/cadastrarCategoria" method="POST">
+					<div class="form-group">
+						<label for="nome_categoria">Nome da Categoria:</label>
+						<input type="text" name="nome_categoria" class="form-control" id="nome_categoria" placeholder="Digite o nome da categoria">
+					</div>
+					<button type="submit" class="btn btn-primary float-right">Cadastrar Categoria</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 
 <script>
 	function goDelete(id) {

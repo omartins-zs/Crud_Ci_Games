@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class Games extends CI_Controller
 {
@@ -7,6 +7,8 @@ class Games extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		header('Access-Control-Allow-Origin: *');
+		header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 		permission();
 		$this->load->model("games_model");
 	}
@@ -79,4 +81,10 @@ class Games extends CI_Controller
 		$this->load->view('templates/js', $dados);
 	}
 
+	public function cadastrarCategoria()
+	{
+		$categoria =  $this->input->post('nome_categoria');
+		$this->games_model->inserirCategoria($categoria);
+		redirect('dashboard');
+	}
 }
