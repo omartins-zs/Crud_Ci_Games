@@ -66,7 +66,6 @@
 
 		// Função para gerar o gráfico de barras usando os dados recebidos
 		function geraGraficoBarras(resultado) {
-			// Extraia as categorias e contagens dos dados
 			var labels = resultado.map(function(item) {
 				return item.category;
 			});
@@ -75,15 +74,14 @@
 				return item.count;
 			});
 
-			// Exibe as labels e counts no console
 			console.log("Labels:", labels);
 			console.log("Counts:", counts);
+
 			// Gera cores aleatórias
 			var randomColors = Array.from({
 				length: labels.length
 			}, () => getRandomColor());
 
-			// Seu código Chart.js aqui
 			const ctx = document.getElementById('myBarChart').getContext('2d');
 			const myBarChart = new Chart(ctx, {
 				type: 'bar',

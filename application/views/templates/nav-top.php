@@ -1,11 +1,13 @@
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow navbar-expand-md">
 	<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Games 4 Devs</a>
+	<a class="nav-link active" aria-current="page" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></a>
 	<div>
 		<form action="<?= base_url() ?>dashboard/pesquisar" method="post">
 			<input class="form-control form-control-dark" type="text" name="busca" id="busca" placeholder="Search" aria-label="Search" value="">
 		</form>
 	</div>
-	<ul class="navbar-nav px-3">
+	<ul class="navbar-nav px-3 ml-auto">
+		<!-- Adicione ml-auto para mover para a direita -->
 		<li class="nav-item text-nowrap">
 			<a class="nav-link" href="<?= base_url() ?>login/logout">Sign out</a>
 		</li>
@@ -53,7 +55,8 @@
 					<a class="nav-link" href="<?= base_url() ?>users">
 						<!-- <i class="fas fa-fw fa-chart-area"></i> -->
 						<i class="fas fa-fw fa-users"></i>
-						<span>Usuarios</span></a>
+						<span>Usuarios</span>
+					</a>
 				</li>
 
 				<!-- Nav Item - Tables -->

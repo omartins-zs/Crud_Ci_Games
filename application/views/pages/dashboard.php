@@ -1,4 +1,4 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+<main role="main" class="col-12 col-md-9 ml-sm-auto col-lg-10 px-4">
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 		<h1 class="h2">Dashboard</h1>
 		<div class="btn-toolbar mb-2 mb-md-0">
@@ -10,12 +10,12 @@
 
 	<div class="row">
 		<div class="col mb-4">
-			<div class="card" style="width: 40rem;">
+			<div class="card" style="width: 100%;">
 				<div class="card-header bg-dark text-white">Jogos Por Categoria</div>
 				<div class="card-body">
 					<h5 class="card-title"></h5>
-					<div>
-						<canvas id="myBarChart"></canvas>
+					<div class="embed-responsive embed-responsive-16by9">
+						<canvas class="embed-responsive-item" id="myBarChart"></canvas>
 					</div>
 				</div>
 			</div>
