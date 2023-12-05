@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29/11/2023 às 03:45
+-- Tempo de geração: 05/12/2023 às 21:08
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -20,6 +20,34 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `crudci_games_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tb_category_games`
+--
+
+CREATE TABLE `tb_category_games` (
+  `id` int(11) NOT NULL,
+  `category` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tb_category_games`
+--
+
+INSERT INTO `tb_category_games` (`id`, `category`) VALUES
+(1, 'Action'),
+(2, 'Adventure'),
+(3, 'Role-Playing'),
+(4, 'Simulation'),
+(5, 'Strategy'),
+(6, 'Sports'),
+(7, 'Indie'),
+(8, 'Casual'),
+(9, 'Racing'),
+(10, 'Horror'),
+(11, 'Open World');
 
 -- --------------------------------------------------------
 
@@ -82,6 +110,12 @@ INSERT INTO `tb_users` (`id`, `name`, `email`, `password`, `country`) VALUES
 --
 
 --
+-- Índices de tabela `tb_category_games`
+--
+ALTER TABLE `tb_category_games`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `tb_games`
 --
 ALTER TABLE `tb_games`
@@ -96,6 +130,12 @@ ALTER TABLE `tb_users`
 --
 -- AUTO_INCREMENT para tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `tb_category_games`
+--
+ALTER TABLE `tb_category_games`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `tb_games`
