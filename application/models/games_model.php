@@ -53,9 +53,15 @@ class Games_model extends CI_model
 		return $this->db->get('tb_games')->result_array();
 	}
 
+	public function categories_index()
+	{
+		$this->db->order_by("category", "ASC");
+		return $this->db->get("tb_category_games")->result_array();
+	}
+
 	public function inserirCategoria($categoryName)
 	{
 		$this->db->set('category', $categoryName);
-        $this->db->insert('tb_category_games');
+		$this->db->insert('tb_category_games');
 	}
 }

@@ -61,6 +61,13 @@
 
 				<!-- Nav Item - Tables -->
 				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url() ?>games/categories">
+						<i class="fas fa-fw fa-chart-area"></i>
+						<span> Categorias
+						</span></a>
+				</li>
+
+				<li class="nav-item">
 					<a class="nav-link" href="<?= base_url() ?>games/mygames">
 						<i class="fas fa-fw fa-table"></i>
 						<span> My Games

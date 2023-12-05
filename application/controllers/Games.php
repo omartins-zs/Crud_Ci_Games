@@ -81,6 +81,18 @@ class Games extends CI_Controller
 		$this->load->view('templates/js', $dados);
 	}
 
+	public function categories()
+	{
+		$dados["categories"]  = $this->games_model->categories_index();
+		$dados["title"] = "Games - CodeIgniter";
+
+		$this->load->view('templates/header', $dados);
+		$this->load->view('templates/nav-top', $dados);
+		$this->load->view('pages/categories', $dados);
+		$this->load->view('templates/footer', $dados);
+		$this->load->view('templates/js', $dados);
+	}
+
 	public function cadastrarCategoria()
 	{
 		$categoria =  $this->input->post('nome_categoria');
